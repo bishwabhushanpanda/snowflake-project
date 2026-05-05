@@ -13,5 +13,9 @@ ALTER TASK IF EXISTS task_sales SUSPEND;
 -- Step 4: Deploy Task
 !source C:\Users\CZ0510\snowflake-project\task/task_sales.sql;
 
+-- Step 4: Deploy Notebook
+!source C:\Users\CZ0510\snowflake-project\Notebook/sp_load_sales_py.sql;
+
+
 -- Step 5: Resume task
 ALTER TASK IF EXISTS task_sales RESUME;

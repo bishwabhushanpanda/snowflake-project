@@ -1,0 +1,5 @@
+CREATE OR REPLACE TASK sales_task_py
+WAREHOUSE = COMPUTE_WH
+SCHEDULE = 'USING CRON 0 2 * * * UTC'
+AS
+CALL sp_load_sales_py();
